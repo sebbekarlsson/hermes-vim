@@ -244,9 +244,9 @@ if exists("c_gnu")
   syn keyword	cStatement	__asm__
   syn keyword	cOperator	typeof __real__ __imag__
 endif
-syn keyword	cType		int string short char void
+syn keyword	cType		int string short char void list
 "syn keyword	cType		signed unsigned float double
-syn keyword	cStructure	struct enum object
+syn keyword	cStructure	enum object
 "syn keyword	cStorageClass	static register auto volatile extern const
 syn keyword cConstant true false
 
