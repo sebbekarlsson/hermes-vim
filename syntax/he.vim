@@ -258,17 +258,6 @@ syn cluster	cMultiGroup	contains=cIncluded,cSpecial,cCommentSkip,cCommentString,
 if s:ft ==# 'c' || exists("cpp_no_cpp11")
   syn region	cMulti		transparent start='?' skip='::' end=':' contains=ALLBUT,@cMultiGroup,@Spell,@cStringGroup
 endif
-" Avoid matching foo::bar() in C++ by requiring that the next char is not ':'
-syn cluster	cLabelGroup	contains=cUserLabel
-syn match	cUserCont	display "^\s*\zs\I\i*\s*:$" contains=@cLabelGroup
-syn match	cUserCont	display ";\s*\zs\I\i*\s*:$" contains=@cLabelGroup
-if s:ft ==# 'cpp'
-  syn match	cUserCont	display "^\s*\zs\%(class\|struct\|enum\)\@!\I\i*\s*:[^:]"me=e-1 contains=@cLabelGroup
-  syn match	cUserCont	display ";\s*\zs\%(class\|struct\|enum\)\@!\I\i*\s*:[^:]"me=e-1 contains=@cLabelGroup
-else
-  syn match	cUserCont	display "^\s*\zs\I\i*\s*:[^:]"me=e-1 contains=@cLabelGroup
-  syn match	cUserCont	display ";\s*\zs\I\i*\s*:[^:]"me=e-1 contains=@cLabelGroup
-endif
 
 syn match	cUserLabel	display "\I\i*" contained
 
@@ -345,7 +334,7 @@ hi def link cCppInElse2		cCppOutIf2
 hi def link cCppOutIf2		cCppOut
 hi def link cCppOut		Comment
 
-let b:current_syntax = "c"
+let b:current_syntax = "he"
 
 unlet s:ft
 
