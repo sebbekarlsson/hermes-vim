@@ -240,15 +240,11 @@ syn match	cCommentStartError display "/\*"me=e-1 contained
 syn match	cWrongComTail	display "\*/"
 
 syn keyword	cOperator	sizeof
-if exists("c_gnu")
-  syn keyword	cStatement	__asm__
-  syn keyword	cOperator	typeof __real__ __imag__
-endif
 syn keyword	cType		int string short char void list
 "syn keyword	cType		signed unsigned float double
 syn keyword	cStructure	enum object
 "syn keyword	cStorageClass	static register auto volatile extern const
-syn keyword cConstant true false
+syn keyword cConstant true false NULL this
 
 " Optional embedded Autodoc parsing
 if exists("c_autodoc")
