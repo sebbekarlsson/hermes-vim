@@ -22,7 +22,7 @@ endif
 " A bunch of useful C keywords
 syn keyword	cStatement	break return continue
 "syn keyword	cLabel		case default
-syn keyword	cConditional	if else
+syn keyword	cConditional	if else with
 syn keyword	cRepeat		while iterate
 
 syn keyword	cTodo		contained TODO FIXME XXX
