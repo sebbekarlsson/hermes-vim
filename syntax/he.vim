@@ -240,7 +240,7 @@ syn match	cCommentStartError display "/\*"me=e-1 contained
 syn match	cWrongComTail	display "\*/"
 
 syn keyword	cOperator	sizeof
-syn keyword	cType		int string short char void list
+syn keyword	cType		long int string char void list
 "syn keyword	cType		signed unsigned float double
 syn keyword	cStructure	enum object
 "syn keyword	cStorageClass	static register auto volatile extern const
