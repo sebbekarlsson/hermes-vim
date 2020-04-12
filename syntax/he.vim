@@ -23,7 +23,7 @@ endif
 syn keyword	cStatement	break return continue
 "syn keyword	cLabel		case default
 syn keyword	cConditional	if else with
-syn keyword	cRepeat		while iterate
+syn keyword	cRepeat		while iterate for
 
 syn keyword	cTodo		contained TODO FIXME XXX
 
