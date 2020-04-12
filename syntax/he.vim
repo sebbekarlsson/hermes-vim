@@ -20,7 +20,7 @@ if exists("c_autodoc")
 endif
 
 " A bunch of useful C keywords
-syn keyword	cStatement	break return continue
+syn keyword	cStatement	break return continue assert
 "syn keyword	cLabel		case default
 syn keyword	cConditional	if else with
 syn keyword	cRepeat		while iterate for
